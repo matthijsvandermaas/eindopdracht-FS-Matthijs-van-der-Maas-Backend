@@ -18,7 +18,6 @@ import java.util.List;
 public class ProductController {
 
     private final ProductService productService;
-    Private
     final ProductRepository productRepository;
 
     public ProductController(ProductRepository productRepository, ProductService productService) {
