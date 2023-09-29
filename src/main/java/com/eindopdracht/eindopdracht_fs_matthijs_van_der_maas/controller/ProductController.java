@@ -4,6 +4,7 @@ import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.repository.Product
 import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.service.ProductService;
 import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.dto.ProductDto;
 import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.model.Product;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -12,7 +13,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -25,12 +25,6 @@ public class ProductController {
         this.productRepository = productRepository;
     }
 
-    @GetMapping
-    public ResponseEntity<List<Product>> getTeachers() {
-        List<Product> products = ProductRepository.findAll();
-        return ResponseEntity.ok(products);
-
-    }
 
     @PostMapping
     public ResponseEntity<Object> createProduct(@Valid @RequestBody ProductDto product, BindingResult br) {

@@ -1,6 +1,7 @@
 package com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.service;
 
-//import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.dto.ProductDto;
+
+import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.dto.ProductDto;
 import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.model.Product;
 import com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.repository.ProductRepository;
 import org.springframework.stereotype.Service;
@@ -15,10 +16,10 @@ public class ProductService {
         this.productRepository = productRepository;
     }
     public List<Product> findAllProducts(){
-        return (List<Product>) (productRepository = productRepository);
+        return (List<Product>) (productRepository.findAllProducts());
     }
 
-    public Product createProduct(Product product) {
+    public Product createProduct(ProductDto product) {
         Product newProduct = new Product();
         newProduct.setName_Product(product.getName_Product());
         newProduct.setName_Producer(product.getName_Producer());
