@@ -25,12 +25,6 @@ public class ProductController {
         this.productRepository = productRepository;
     }
 
-    @GetMapping
-    public ResponseEntity<List<Product>> getTeachers() {
-        List<Product> products = ProductRepository.findAll();
-        return ResponseEntity.ok(products);
-
-    }
 
     @PostMapping
     public ResponseEntity<Object> createProduct(@Valid @RequestBody ProductDto product, BindingResult br) {
