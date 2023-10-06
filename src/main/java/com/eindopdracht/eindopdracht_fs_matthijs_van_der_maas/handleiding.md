@@ -1,1 +1,1 @@
-instal maven `mvn clean install`
+install maven `mvn clean install`

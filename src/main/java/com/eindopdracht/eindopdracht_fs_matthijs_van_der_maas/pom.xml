@@ -11,8 +11,12 @@
     <groupId>com.eindopdracht</groupId>
     <artifactId>eindopdracht_FS_matthijs_van_der_maas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>eindopdracht_FS_matthijs_ van_der_maas</name>
     <description>eindopdracht_FS_matthijs_ van_der_maas</description>
+    <modules>
+        <module>src</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>
