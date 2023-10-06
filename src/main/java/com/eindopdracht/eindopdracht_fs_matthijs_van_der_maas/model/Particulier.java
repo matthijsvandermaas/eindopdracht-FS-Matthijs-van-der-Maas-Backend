@@ -2,6 +2,7 @@ package com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
@@ -12,7 +13,7 @@ import jakarta.validation.constraints.Pattern;
 @Table(name = "Particulier")
 public class Particulier {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
@@ -28,11 +29,11 @@ public class Particulier {
     private String email;
 
     @NotBlank
-    @Pattern(regexp = "^([A-HK-PRSVWY][A-HJ-PR-Y])\\s?([0][2-9]|[1-9][0-9])\\s?[A-HJ-PR-Z]{3}$")
+    @Pattern(regexp = "^(jouw reguliere expressie hier)$")
     private String user_Name;
 
     @NotBlank
-    @Pattern(regexp = "^([A-HK-PRSVWY][A-HJ-PR-Y])\\s?([0][2-9]|[1-9][0-9])\\s?[A-HJ-PR-Z]{3}$")
+    @Pattern(regexp = "^(jouw reguliere expressie hier)$")
     private String password;
 
     // Getter- en setter-methoden hier

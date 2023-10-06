@@ -3,6 +3,10 @@ package com.eindopdracht.eindopdracht_fs_matthijs_van_der_maas.dto;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Email;
+import jakarta.persistence.Size;
+import jakarta.persistence.Pattern;
+import jakarta.persistence.NotBlank;
 import jakarta.validation.constraints.*;
 
 public class ParticulierDto {
